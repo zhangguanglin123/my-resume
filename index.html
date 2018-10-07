@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>my resume</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/echarts.common.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+		<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script>
+		$(function(){
+			$('#dowebok').fullpage({
+//				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+				afterLoad: function(anchorLink, index){
+					if(index == 2){
+						$('.section2').find('.course').delay(500).animate({
+							left: '0'
+						}, 1500, 'easeOutExpo');
+					}
+					if(index == 3){
+						$('.section3').find('#main').delay(500).animate({
+							bottom: '0'
+						}, 1500, 'easeOutExpo');
+					}
+					if(index == 4){
+						$('.section4').find('.works').fadeIn(2000);
+					}
+				},
+				onLeave: function(index, direction){
+					if(index == '2'){
+						$('.section2').find('.course').delay(500).animate({
+							left: '-120%'
+						}, 1500, 'easeOutExpo');
+					}
+					if(index == '3'){
+						$('.section3').find('#main').delay(500).animate({
+							bottom: '-120%'
+						}, 1500, 'easeOutExpo');
+					}
+					if(index == '4'){
+						$('.section4').find('.works').fadeOut(2000);
+					}
+				}
+			});
+		});
+		</script>
+
+	</head>
+	<body>
+		<div id="dowebok">
+			<div class="section section1">
+				<h3>个人主页</h3>
+				<div class="intro">
+					<p>姓名:张广林</p>
+					<p>性别:男</p>
+					<p>年龄:22</p>
+					<p>爱好:看NBA,打游戏,K歌</p>
+				</div>
+			</div>
+			<div class="section section2">
+				<h3>能力介绍</h3>
+				<div class="course">
+					<p>
+						您好,我叫张广林,来自山西运城。我的专业是信息与计算科学,我要应聘的岗位是前端工程师,我学习过PS,可以
+					自己进行一些切图以及简单的P图,也学习过交互,明白交互的流程,可以很好的与设计师进行交接,可以写出响应式
+					页面,移动端页面以及PC端页面,也学习过后台的知识,可以无障碍的与后端工程师进行工作的交接。
+					</p>
+					<p>进入这个行业的最大一个原因就是因为薪资,能吃苦耐劳,只要BOSS发话,加班之类的在下愿效犬马之劳。</p>
+				</div>
+			</div>
+			<div class="section section3">
+				<h3>skills</h3>
+				<div id="main"></div>
+			</div>
+			<div class="section section4">
+				<h3>作品展示</h3>
+				<div class="works">
+					<div class="ico">
+						<img src="img/图层10@3x.png"/>
+						<img src="img/图层3@3x.png"/>
+						<img src="img/图层7拷贝@3x.png"/>
+						<img src="img/椭圆29@3x.png"/>
+					</div>
+					<div class="page">
+						<a href="https://zhangguanglin123.github.io/xiaomi/xiaomi/mi.html">小米</a>
+	                	<a href="https://zhangguanglin123.github.io/jingdong/京东/xiujing.html">京东</a>
+	                	<a href="https://zhangguanglin123.github.io/zouni/">天气APP</a>
+	                	<a href="https://zhangguanglin123.github.io/suxinhuahui/素馨花卉/huahui.html">素馨花卉</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script>
+		echarts.init(document.getElementById('main')).setOption({
+            series : [
+		        {
+		            name: '访问来源',
+		            type: 'pie',
+		            roseType: 'angle',
+		            radius: '55%',
+		            data:[
+		                {value:235, name:'HTML5'},
+		                {value:274, name:'CSS3'},
+		                {value:310, name:'JavaScript'},
+		                {value:335, name:'php'},
+		                {value:400, name:'JQuery'}
+		            ]
+		        }
+		    ]
+            
+        });
+        
+	</script>
+</html>

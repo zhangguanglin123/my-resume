@@ -1,0 +1,83 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+.section{
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.section1{
+	background-image: url(../img/16j58PICHq7_1024.jpg);
+}
+.section2{
+	background-image: url(../img/timg.jpg);
+	background-size: 120%;
+}
+.section3{
+	background-image: url(../img/98f58PICNsm.jpg);
+}
+.section4{
+	background-image: url(../img/76f58PICx3Z_1024.jpg);
+}
+.intro{
+	width: 800px;
+	height: 300px;
+	line-height: 40px;
+	margin: auto;
+	font-size: 24px;
+	color: gold;
+}
+.intro p:nth-child(1){
+	margin-top: 50px;
+}
+.course{
+	width: 800px;
+	height: 300px;
+	line-height: 30px;
+	margin: auto;
+	font-size: 20px;
+}
+.course p:nth-child(1){
+	margin-top: 50px;
+}
+.course p:nth-child(2){
+	margin-top: 50px;
+}
+#main{
+	width: 800px;
+	height: 500px;
+	margin: auto;
+}
+.works{
+	width: 100%;
+	height: 200px;
+}
+.ico{
+	width: 800px;
+	height: 200px;
+	/*background: pink;*/
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+.ico img{
+	display: block;
+	width: 120px;
+	height: 120px;
+}
+.page a{
+	color: white;
+}
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+.section2 .course { position: relative; left: -120%;}
+#main { position: relative; bottom: -120%;}
+.section4 .works { display: none;}
+.section1 h3{
+	color: goldenrod;
+}
+.section3 h3{
+	color: orangered;
+}
