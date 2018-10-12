@@ -32,18 +32,34 @@
 .intro p:nth-child(1){
 	margin-top: 50px;
 }
-.course{
+.course,.contact{
 	width: 800px;
 	height: 300px;
 	line-height: 30px;
 	margin: auto;
 	font-size: 20px;
 }
+.study{
+	width: 800px;
+	height: 300px;
+	line-height: 300px;
+	margin: auto;
+	font-size: 40px;
+}
 .course p:nth-child(1){
 	margin-top: 50px;
 }
 .course p:nth-child(2){
 	margin-top: 50px;
+}
+.contact p:nth-child(1){
+	margin-top: 50px;
+}
+.contact p:nth-child(2){
+	margin-top: 20px;
+}
+.contact p:nth-child(3){
+	margin-top: 20px;
 }
 #main{
 	width: 800px;
